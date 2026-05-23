@@ -1,5 +1,7 @@
 import RelatedBlock from "../RelatedBlock";
 
+const base = import.meta.env.BASE_URL
+
 const Summary = () => {
 
     return (
@@ -12,10 +14,10 @@ const Summary = () => {
 
             <div className="grid grid-cols-2 grid-rows-2 gap-5 mt-6">
 
-                <RelatedBlock url="/related/1.jpg" title="3DCG・VFX"/>
-                <RelatedBlock url="/related/2.jpg" title="グラフィックデザイン"/>
-                <RelatedBlock url="/related/3.jpg" title="広告・PR起業"/>
-                <RelatedBlock url="/related/4.jpg" title="映像・映画"/>
+                <RelatedBlock url={`${base}related/1.jpg`} title="3DCG・VFX"/>
+                <RelatedBlock url={`${base}related/2.jpg`} title="グラフィックデザイン"/>
+                <RelatedBlock url={`${base}related/3.jpg`} title="広告・PR起業"/>
+                <RelatedBlock url={`${base}related/4.jpg`} title="映像・映画"/>
 
             </div>
 
