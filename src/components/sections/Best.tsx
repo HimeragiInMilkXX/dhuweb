@@ -3,6 +3,8 @@ import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "../ui
 import { Dot } from 'lucide-react';
 import { best } from "../../export";
 
+const base = import.meta.env.BASE_URL
+
 const Best = () => {
 
     const [api, setApi] = useState<CarouselApi>()
@@ -37,7 +39,7 @@ const Best = () => {
                 className=""
                 >
                 <CarouselContent className="h-80 sm:h-130">
-                    { best.map( ( _, index ) => { return <CarouselItem className={`basis-full md:basis-1/2 p-0 mx-5 relative opacity-80 hover:[&>img]:scale-102 overflow-hidden`} key={index} ><img src={`/best/${index+1}.jpg`} key={index} alt="" className="h-full object-cover w-full transition-all" style={{ borderRadius: '4px'}}/></CarouselItem> })}
+                    { best.map( ( _, index ) => { return <CarouselItem className={`basis-full md:basis-1/2 p-0 mx-5 relative opacity-80 hover:[&>img]:scale-102 overflow-hidden`} key={index} ><img src={`${base}best/${index+1}.jpg`} key={index} alt="" className="h-full object-cover w-full transition-all" style={{ borderRadius: '4px'}}/></CarouselItem> })}
                 </CarouselContent>
 
             </Carousel>

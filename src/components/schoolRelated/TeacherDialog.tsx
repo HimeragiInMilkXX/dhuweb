@@ -2,6 +2,8 @@ import type { FunctionComponent } from "react";
 import { CarouselItem } from "../ui/carousel";
 import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogHeader, DialogDescription } from "../ui/dialog";
 
+const base = import.meta.env.BASE_URL
+
 const TeacherDialog: FunctionComponent<{ teacher: { name: string, pos: string, desc: string, hashtags: string[], more: string }, current: number, index: number }> = ({ teacher, current, index }) => {
 
     return (
@@ -9,7 +11,7 @@ const TeacherDialog: FunctionComponent<{ teacher: { name: string, pos: string, d
         <CarouselItem className={`basis-1/3 p-0 relative pointer-events-none ${current === index && 'pointer-events-auto! z-2'}`} >
             
             <Dialog>
-                <DialogTrigger><img src={`/teacher/${teacher.name}.jpg`} alt="" className={`transition-all origin-center cursor-pointer ${current === index ? 'md:scale-120' : 'opacity-30'}`}/></DialogTrigger>
+                <DialogTrigger><img src={`${base}teacher/${teacher.name}.jpg`} alt="" className={`transition-all origin-center cursor-pointer ${current === index ? 'md:scale-120' : 'opacity-30'}`}/></DialogTrigger>
                 <DialogContent className="ring-0 max-w-[80vw]! bg-black/50 p-6">
                     <DialogHeader>
 

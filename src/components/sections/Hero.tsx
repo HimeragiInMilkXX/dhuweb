@@ -1,5 +1,7 @@
 import GuideArrow from "../GuideArrow";
 
+const base = import.meta.env.BASE_URL
+
 const Hero = () => {
 
     return (
@@ -16,7 +18,7 @@ const Hero = () => {
 
             </div>
 
-            <img src="/logo.png" alt="" className="w-26 aspect-square object-contain absolute top-4 left-4"/>
+            <img src={`${base}logo.png`} alt="" className="w-26 aspect-square object-contain absolute top-4 left-4"/>
 
             <GuideArrow className="absolute bottom-8 left-1/2 -translate-x-1/2"/>
 
